@@ -1,0 +1,199 @@
+
+.header {
+
+    border-bottom: 1px solid whitesmoke;
+    
+
+}
+
+.hdr1 {
+    float: right;
+    margin-right: 10%;
+}
+
+.material-symbols-outlined {
+    float: right;
+}
+
+#icon1 {
+    margin-left: 5px;
+    font-size: 40px;
+    color: blue;
+
+}
+
+#icon2 {
+    font-size: 40px;
+    color: blue;
+    margin-right: 20px;
+}
+
+.title {
+    margin-left: 10%;
+    font-size: 30px;
+}
+
+.title span {
+    color: blueviolet;
+}
+
+.title sub {
+    color: black;
+}
+
+.hdr1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.hdrspn {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.resform {
+    
+    border: 2px solid whitesmoke;
+    width: 30%;
+    margin: auto;
+    padding: 2%;
+    margin-top:5%;
+    min-width: 30%;
+    overflow: auto;
+    background-color: beige;
+    
+}
+form{
+   overflow: auto;
+}
+
+.fname {
+    float: left;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.lname {
+
+   
+    float: left;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.email {
+    clear: both;
+    margin-top: 10px;
+}
+#email{
+    width: 92%;
+    
+    
+}
+
+.radio {
+    margin-top: 10px;
+
+}
+
+.cyloc {
+    float: left;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.coloc {
+
+    float: left;
+    margin-top: 10px;
+    width: auto;
+    width: 50%;
+}
+#loc{
+    width: 90%;
+}
+
+.crpass {
+    clear: both;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+
+}
+
+.repass {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+         
+.submit {
+   
+   clear: both; 
+   
+   margin-top: 10px;
+
+}
+#submit{
+    width: 94%;
+}
+.check{
+    margin-left: 0;
+    margin-top: 10px;
+}
+.check a{
+    text-decoration: none;
+    color: blue;
+}.login{
+    text-align: center;
+   
+}
+.login a{
+    text-decoration: none;
+}
+.footer{
+    margin-top: 20px;
+    border-top:1px solid whitesmoke ;
+    
+    overflow: auto;
+
+}
+.terms{
+    margin: 10px;
+    float: left;
+}
+.terms a{
+    text-decoration: none;
+}
+.copyright{
+    float: right;
+    margin: 10px;
+}
+a:hover{
+    color: rgba(209, 41, 63, 0.89);
+}
+#sign{
+    cursor: pointer;
+    color: blue;
+}
+
+#regi{
+    cursor: pointer;
+    color: blue;
+}
+#user_name{
+    margin-top: 10px;
+}
+#log_pass{
+    margin-top: 10px;
+}
+#log_btn{
+    margin-top: 10px;
+}
+.hover:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+    

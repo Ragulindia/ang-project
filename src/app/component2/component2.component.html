@@ -1,0 +1,27 @@
+
+<button class="clg_btn" (click)="stu_details()">Show student details</button>
+<button class="clg_btn" (click)="teacher_details()">Show teacher detail</button>
+<div *ngIf="teacher == 'teacher'">
+    <p>Name : {{Teacher_details.teacher_name}}</p>
+    <p>Id : {{Teacher_details.teacher_id}}</p>
+    <p>Class: {{Teacher_details.teacher_class}}</p>
+</div>
+<div *ngIf="student=='stu'">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Class</th>
+            <th>Section</th>
+            <th>Contact No</th>
+        </tr>
+        <tr *ngFor="let stu of student_details; let i=index">
+            <td [ngClass]="{'name':getname(stu.stu_name)}">{{i+1}}.{{stu.stu_name}}</td>
+            <td>{{stu.stu_rollNo}}</td>
+            <td [ngStyle]="{'color':stu.stu_class==12?'red':'blue'}">{{stu.stu_class}}</td>
+            <td [ngStyle]="{'color':getcolor(stu.stu_section)}">{{stu.stu_section}}</td>
+            <td>{{stu.stu_contact}}</td>
+        </tr>
+    </table>
+</div>
+<router-outlet></router-outlet>
