@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Companant1Component } from './component1/companant1.component';
 import { Component2Component } from './component2/component2.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
+import { headercomponent } from './header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
@@ -17,8 +16,8 @@ import { ServicesComponent } from './services/services.component';
     AppComponent,
     Companant1Component,
     Component2Component,
-    HeaderComponent,
-    HomeComponent,
+    headercomponent,
+
     AboutUsComponent,
     ProductsComponent,
     ServicesComponent,
@@ -30,7 +29,7 @@ import { ServicesComponent } from './services/services.component';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [Component2Component ],
+  bootstrap: [headercomponent],
   
  
 })

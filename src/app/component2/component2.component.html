@@ -15,11 +15,12 @@
             <th>Contact No</th>
         </tr>
         <tr *ngFor="let stu of student_details; let i=index">
-            <td *ngClass="{'name':getname(stu.stu_name)}">{{i+1}}.{{stu.stu_name}}</td>
+            <td [ngClass]="{'name':getname(stu.stu_name)}">{{i+1}}.{{stu.stu_name}}</td>
             <td>{{stu.stu_rollNo}}</td>
-            <td *ngStyle="{'color':stu.stu_class==12?'red':'blue'}">{{stu.stu_class}}</td>
-            <td *ngStyle="{'color':getcolor(stu.stu_section)}">{{stu.stu_section}}</td>
+            <td [ngClass]="{'color':stu.stu_class==12?'red':'blue'}">{{stu.stu_class}}</td>
+            <td [ngClass]="{'color':getcolor(stu.stu_section)}">{{stu.stu_section}}</td>
             <td>{{stu.stu_contact}}</td>
         </tr>
     </table>
 </div>
+<router-outlet></router-outlet>
