@@ -5,9 +5,11 @@
     padding-left: 1vw;
     padding-top: 0%;
     padding-bottom: 1vw;
+    
+    
 }
 
-.header a {
+.head a {
     text-decoration: none;
 }
 .head {
@@ -17,5 +19,12 @@
     overflow: auto;
     margin-top: 0%;
     background-color: lightcyan;
-    padding-top: 0%;
+    
+}
+#user_icon{
+    float: right;
+    padding-right: 1vw ;
+}
+.head ul{
+    padding-left: 0%;
 }
