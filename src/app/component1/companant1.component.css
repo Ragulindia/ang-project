@@ -59,7 +59,7 @@
     padding: 2%;
     margin-top:5%;
     min-width: 30%;
-    overflow: auto;
+    overflow: auto; 
     background-color: beige;
     
 }
@@ -196,4 +196,4 @@ a:hover{
     font-weight: bold;
     text-decoration: underline;
 }
-    
+     

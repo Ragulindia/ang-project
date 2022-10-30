@@ -1,0 +1,21 @@
+.header li {
+    list-style-type: none;
+    font-size: 1.5vw;
+    float: left;
+    padding-left: 1vw;
+    padding-top: 0%;
+    padding-bottom: 1vw;
+}
+
+.header a {
+    text-decoration: none;
+}
+.head {
+    width: 100%;
+    border: 1px solid lightcyan;
+    box-sizing: border-box;
+    overflow: auto;
+    margin-top: 0%;
+    background-color: lightcyan;
+    padding-top: 0%;
+}

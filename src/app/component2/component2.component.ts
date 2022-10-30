@@ -75,4 +75,8 @@ export class Component2Component implements OnInit {
     }
   }
   
+  title:string="This is the interpolation value from typescript";
+  data_binding(){
+    this.title="The value changed by CLICK Event";
+  }
 }

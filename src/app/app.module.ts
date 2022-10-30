@@ -17,12 +17,9 @@ import { ServicesComponent } from './services/services.component';
     Companant1Component,
     Component2Component,
     headercomponent,
-
     AboutUsComponent,
     ProductsComponent,
     ServicesComponent,
-    
-    
   ],
   imports: [
     BrowserModule,
