@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { student } from '../clg_details/student';
 import { Teacher } from '../clg_details/student';
+import{UserServicesService} from'../user-services.service'
 @Component({
   selector: 'app-component2',
   templateUrl: './component2.component.html',
@@ -10,33 +11,11 @@ import { Teacher } from '../clg_details/student';
 
 export class Component2Component implements OnInit {
 
-  constructor() { }
+  constructor(private serStu: UserServicesService) { }
 
   ngOnInit(): void {
   }
-  public student_details: student[] = [
-    {
-      stu_name: "Ragul",
-      stu_rollNo: 101,
-      stu_class: 12,
-      stu_section: "A",
-      stu_contact: 12345
-    },
-    {
-      stu_name: "Raj",
-      stu_rollNo: 102,
-      stu_class: 10,
-      stu_section: "B",
-      stu_contact: 12345
-    },
-    {
-      stu_name: "Ragu",
-      stu_rollNo: 101,
-      stu_class: 11,
-      stu_section: "C",
-      stu_contact: 12345
-    },
-  ]
+  public student_details = this.serStu.srvId;
   public Teacher_details: Teacher = {
     teacher_name: "ABC",
     teacher_id: 123,
@@ -74,9 +53,9 @@ export class Component2Component implements OnInit {
       return 'yellow';
     }
   }
-  
-  title:string="This is the interpolation value from typescript";
-  data_binding(){
-    this.title="The value changed by CLICK Event";
+
+  title: string = "This is the interpolation value from typescript";
+  data_binding() {
+    this.title = "The value changed by CLICK Event";
   }
 }

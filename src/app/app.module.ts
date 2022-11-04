@@ -9,6 +9,12 @@ import { headercomponent } from './header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+import{FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { UserAuthGuard } from './user-auth.guard';
+import { LoginComponent } from './login/login.component';
+import { UserServicesService } from './user-services.service';
+
+
 
 
 @NgModule({
@@ -20,13 +26,17 @@ import { ServicesComponent } from './services/services.component';
     AboutUsComponent,
     ProductsComponent,
     ServicesComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  
   ],
-  providers: [],
-  bootstrap: [headercomponent],
+  providers: [UserAuthGuard,UserServicesService],
+  bootstrap: [Component2Component],
   
  
 })

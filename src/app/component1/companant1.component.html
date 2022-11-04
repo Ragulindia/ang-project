@@ -1,10 +1,10 @@
-
-
 <body>
+    
     <div class="header">
         <div class="hdr1">
             <span *ngStyle="{'color':'red'}">Welcome!</span><br>
-            <span (click)="signin()" id="sign" class="hover">Sign in</span><span class="hdrspn">|</span><span (click)="register()" id="regi" class="hover">Register</span>
+            <span (click)="signin()" id="sign" class="hover">Sign in</span><span class="hdrspn">|</span><span
+                (click)="register()" id="regi" class="hover">Register</span>
         </div>
 
         <div>
@@ -23,36 +23,36 @@
     </div>
     <div class="resform">
         <div *ngIf="RegisterPage == true">
-            <form method="post">
+            <form #registerForm="ngForm" (ngSubmit)="regi(registerForm)">
                 <h2>Sign up</h2>
 
                 <div class="fname">
                     <label>First name</label><br>
-                    <input type="text" name="firstname" id="firstname" autofocus>
+                    <input type="text" name="firstname" id="firstname" autofocus ngModel #fname="ngModel">
                 </div>
                 <div class="lname">
                     <label>Last name</label><br>
-                    <input type="text" name="lastname" id="lastname">
+                    <input type="text" name="lastname" id="lastname" ngModel required>
                 </div>
                 <div class="email">
                     <label>Email</label><br>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" ngModel>
 
                 </div>
                 <div class="radio">
-                    <input type="radio" name="genter" id="radio" value="Male">Male
-                    <input type="radio" name="genter" id="radio" value="Female">Female
+                    <input type="radio" name="genter" id="radio" value="Male" ngModel>Male
+                    <input type="radio" name="genter" id="radio" value="Female" ngModel>Female
                 </div>
                 <div class="cyloc">
                     <label>City</label><br>
-                    <input type="text" name="city" id="city">
+                    <input type="text" name="city" id="city" ngModel>
 
                 </div>
                 <div class="coloc">
                     <label>Country</label><br>
-                    <select id="loc">
+                    <select id="loc" name="country" ngModel>
                         <option>United Nations</option>
-                        <option>India</option>
+                        <option value="india">India</option>
                         <option>Europe</option>
                     </select>
                 </div>
@@ -65,7 +65,7 @@
                     <input type="password" name="pass" id="repass">
                 </div>
                 <div class="submit">
-                    <input type="submit" name="submit" id="submit" value="Register">
+                    <button type="submit" [disabled]="!registerForm.valid">Register</button>
                 </div>
                 <div class="check">
                     <input type="checkbox" name="checkbox" id="checkbox">
@@ -73,16 +73,18 @@
                 </div>
             </form>
             <div class="login">
-                <p>Have an account? <span  (click)="signin()" id="sign" class="hover">Log in</span></p>
+                <p>Have an account? <span (click)="signin()" id="sign" class="hover">Log in</span></p>
             </div>
         </div>
+        
+        
 
         <div *ngIf="LoginPage == true">
 
             <h2>Log in</h2>
             <div id="user_name">
 
-                <input type="text" name="userName" id="userName" autofocus placeholder="Enter your user name" >
+                <input type="text" name="userName" id="userName" autofocus placeholder="Enter your user name">
             </div>
             <div id="log_pass">
                 <input type="password" name="logPass" id="logPass" placeholder="Enter your password">
@@ -90,7 +92,7 @@
             <div id="log_btn">
                 <button id="logBtn" hover="color:red">Log in</button>
             </div>
-           
+
             <div class="login">
                 <p>Don't have an account? <span (click)="register()" id="regi" class="hover">Register</span></p>
             </div>
@@ -99,7 +101,12 @@
     </div>
 
 
-   
 
-  <router-outlet></router-outlet>
 
+
+
+
+
+
+
+    <router-outlet></router-outlet>

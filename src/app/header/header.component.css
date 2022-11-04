@@ -28,3 +28,6 @@
 .head ul{
     padding-left: 0%;
 }
+.active{
+    color: rgb(46, 196, 26);
+}

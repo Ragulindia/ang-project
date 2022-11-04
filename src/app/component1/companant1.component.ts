@@ -11,20 +11,22 @@ export class Companant1Component implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   public RegisterPage: boolean = false;
   public LoginPage: boolean = true;
 
-  register(){
-     this.RegisterPage = true;
-    this.LoginPage= false;
+  register() {
+    this.RegisterPage = true;
+    this.LoginPage = false;
 
   }
-   signin(){
-    this.RegisterPage=false;
-    this.LoginPage= true;
+  signin() {
+    this.RegisterPage = false;
+    this.LoginPage = true;
 
   }
-
+  regi(registerForm:any) {
+    console.log(registerForm.value);
+  }
 }
 
