@@ -1,7 +1,7 @@
 <button class="clg_btn" (click)="stu_details()">Show student details</button>
 <button class="clg_btn" (click)="teacher_details()">Show teacher detail</button>
 <div *ngIf="teacher == 'teacher'">
-    <p>Name : {{Teacher_details.teacher_name}}</p>
+    <p>Name : {{Teacher_details.teacher_name | lowercase}}</p>
     <p>Id : {{Teacher_details.teacher_id}}</p>
     <p>Class: {{Teacher_details.teacher_class}}</p>
 </div>
@@ -15,10 +15,10 @@
             <th>Contact No</th>
         </tr>
         <tr *ngFor="let stu of student_details; let i=index">
-            <td [ngClass]="{'name':getname(stu.stu_name)}">{{i+1}}.{{stu.stu_name}}</td>
+            <td [ngClass]="{'name':stu.stu_name=='Ragul'}">{{i+1}}.{{stu.stu_name | uppercase}}</td>
             <td>{{stu.stu_rollNo}}</td>
-            <td [ngClass]="{'color':stu.stu_class==12?'red':'blue'}">{{stu.stu_class}}</td>
-            <td [ngClass]="{'color':getcolor(stu.stu_section)}">{{stu.stu_section}}</td>
+            <td [ngStyle]="{'color':stu.stu_class==12?'red':'blue'}">{{stu.stu_class}}</td>
+            <td [ngStyle]="{'color':getcolor(stu.stu_section)}">{{stu.stu_section}}</td>
             <td>{{stu.stu_contact}}</td>
         </tr>
     </table>
@@ -28,5 +28,47 @@
     <p>Using Interpolation</p>
     <span>{{title}}</span>
     <button type="submit" (click)="data_binding()">click event</button>
+
 </div>
+<div>
+    <button (click)="getHttp()">Http request</button>
+</div>
+<p [innerText]="Title"></p>
+
+<img [src]="imageUrl">
+<img [src]="imageUrl1" alt="angular_img">
+<div>
+    <input type="radio" name="emp" (click)="empDet()"><span>Employe details</span>
+    <input type="radio" name="emp" (click)="salDet()"><span>Salary Details</span>
+</div>
+
+<div *ngIf="EMPLOYEE">
+    <h3>Emloyee details</h3>
+    <p>Employee details function is working</p>
+    <p>{{ngif1}}</p>
+</div>
+<div *ngIf="SALARY">
+    <h3>Salary details</h3>
+    <p>Salary details function is working</p>
+    <p>{{ngif2}}</p>
+
+</div>
+<hr>
+<div>
+    <p>Friuts</p>
+    <ul>
+        <li *ngFor="let friut of friuts;let i =index" [ngStyle]="{'color':'red'}" style="list-style-type: none;">
+            {{i+1}}.{{friut}}</li>
+    </ul>
+    <p>{{Today_date | date:'HH:MM a'}}</p>
+    <p>{{Today_date | date:'mediumDate'}}</p>
+</div>
+<div>
+    <p>
+        {{student_details | json}}
+    </p>
+</div>
+
+
+
 <router-outlet></router-outlet>

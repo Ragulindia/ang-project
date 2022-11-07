@@ -1,11 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { student } from './clg_details/student';
 @Injectable({
   providedIn: 'root'
 })
 export class UserServicesService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  baseURL:string="https://gorest.co.in/public/v2/users";
+
   public srvId:student[]=[
     {
       stu_name: "Ragul",
@@ -31,4 +35,7 @@ export class UserServicesService {
   ]
 
   
+  httpRequest():Observable<any>{
+    return this.http.get(this.baseURL);
+  }
 }

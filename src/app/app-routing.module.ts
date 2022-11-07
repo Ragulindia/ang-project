@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Companant1Component } from './component1/companant1.component';
 import { Component2Component } from './component2/component2.component';
 import { headercomponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { UserAuthGuard } from './user-auth.guard';
-
+import{AboutUsComponent} from './about-us/about-us.component';
+import { PageaNotFoundComponent } from './pagea-not-found/pagea-not-found.component';
 
 const routes: Routes = [
     {
@@ -22,7 +23,13 @@ const routes: Routes = [
     path:'login',component:LoginComponent
   },
   {
-    path:"",redirectTo:'header',pathMatch:'full'
+    path:'about-us', component:AboutUsComponent
+  },
+  {
+    path:"",redirectTo:'home',pathMatch:'full'
+  },
+  {
+    path:'**',component:PageaNotFoundComponent
   }
   
 ]

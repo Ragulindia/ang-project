@@ -13,7 +13,8 @@ import{FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { UserAuthGuard } from './user-auth.guard';
 import { LoginComponent } from './login/login.component';
 import { UserServicesService } from './user-services.service';
-
+import {  HttpClientModule } from '@angular/common/http';
+import { PageaNotFoundComponent } from './pagea-not-found/pagea-not-found.component';
 
 
 
@@ -27,16 +28,18 @@ import { UserServicesService } from './user-services.service';
     ProductsComponent,
     ServicesComponent,
     LoginComponent,
+    PageaNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   
   ],
   providers: [UserAuthGuard,UserServicesService],
-  bootstrap: [Component2Component],
+  bootstrap: [headercomponent],
   
  
 })

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { student } from '../clg_details/student';
+
 import { Teacher } from '../clg_details/student';
 import{UserServicesService} from'../user-services.service'
 @Component({
@@ -42,20 +42,42 @@ export class Component2Component implements OnInit {
       return 'yellow';
     }
   }
-  getname(Name: string): string {
-    if (Name == 'Ragul') {
-      return 'red';
-    }
-    else if (Name == "Ragu") {
-      return 'blue';
-    }
-    else {
-      return 'yellow';
-    }
-  }
+//  getname(Name: string): string {
+//     if (Name == 'Ragul') {
+//       return 'red';
+//     }
+//     else if (Name == "Ragu") {
+//       return 'blue';
+//     }
+//     else {
+//       return 'yellow';
+//     }
+//   }
 
   title: string = "This is the interpolation value from typescript";
   data_binding() {
     this.title = "The value changed by CLICK Event";
   }
+  getHttp(){
+    this.serStu.httpRequest().subscribe( res => console.log(res));
+  }
+  Title:string="This value from the Property binding";
+  imageUrl="C:/Angular projects/Angularlogo.png";
+  imageUrl1="https://angular.io/assets/images/logos/angular/logo-nav@2x.png";
+
+  ngif1:string="This Employee details  from typescript file";
+  ngif2:string="This Salary details  from typescript file";
+
+  EMPLOYEE:boolean=false;
+  SALARY:boolean=false;
+  empDet(){
+    this.EMPLOYEE=true;
+    this.SALARY=false;
+  }
+  salDet(){
+    this.SALARY=true;
+    this.EMPLOYEE=false;
+  }
+  friuts:string[]=["apple","bannana",'orange']
+  Today_date= new Date
 }

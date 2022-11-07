@@ -1,0 +1,17 @@
+.pagehead{
+    text-align: center;
+}
+.pagehead a {
+    text-decoration: none;
+}
+.pagehead a:hover{
+    background-color: green;
+    color: white;
+}
+button:hover{
+    background-color: green;
+    
+}
+button{
+    border-radius: 5px;
+}
