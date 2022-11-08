@@ -5,33 +5,36 @@ import { Component2Component } from './component2/component2.component';
 import { headercomponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { UserAuthGuard } from './user-auth.guard';
-import{AboutUsComponent} from './about-us/about-us.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { PageaNotFoundComponent } from './pagea-not-found/pagea-not-found.component';
 
 const routes: Routes = [
-    {
-    path:'home',component:Component2Component,
-    canActivate:[UserAuthGuard]
+  {
+    path: 'home', component: Component2Component,
+    canActivate: [UserAuthGuard]
   },
   {
-    path:'register',component:Companant1Component
+    path: 'home1', component: Component2Component,
   },
   {
-    path:'header',component:headercomponent
+    path: 'register', component: Companant1Component
   },
   {
-    path:'login',component:LoginComponent
+    path: 'header', component: headercomponent
   },
   {
-    path:'about-us', component:AboutUsComponent
+    path: 'login', component: LoginComponent
   },
   {
-    path:"",redirectTo:'home',pathMatch:'full'
+    path: 'about-us', component: AboutUsComponent
   },
   {
-    path:'**',component:PageaNotFoundComponent
+    path: "", redirectTo: 'home', pathMatch: 'full'
+  },
+  {
+    path: '**', component: PageaNotFoundComponent
   }
-  
+
 ]
 
 @NgModule({

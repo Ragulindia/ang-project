@@ -3,10 +3,10 @@
     font-size: 1.5vw;
     float: left;
     padding-left: 1vw;
-    padding-top: 0%;
+    /* padding-top: 0%; */
     padding-bottom: 1vw;
-    
-    
+    display: block;
+    box-sizing: border-box;
 }
 
 .head a {
@@ -14,11 +14,13 @@
 }
 .head {
     width: 100%;
-    border: 1px solid lightcyan;
-    box-sizing: border-box;
-    overflow: auto;
+    /* border: 1px solid lightcyan; */
+    border: none;
+    box-sizing: content-box;
+    overflow: hidden;
     margin-top: 0%;
     background-color: lightcyan;
+    vertical-align: middle;
     
 }
 #user_icon{
@@ -29,5 +31,8 @@
     padding-left: 0%;
 }
 .active{
-    color: rgb(46, 196, 26);
+    color: rgb(31, 231, 41);
+    /* background-color: green; */
+    width: 100%;
+    overflow: auto;
 }

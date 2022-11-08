@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-pagea-not-found',
   templateUrl: './pagea-not-found.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageaNotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rou: Router) { }
 
   ngOnInit(): void {
   }
 
+  navByUrl(){
+    this.rou.navigateByUrl('/home')
+  }
+  
 }
