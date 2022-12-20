@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import{ student, Teacher} from '../clg_details/student'
 
 @Component({
   selector: 'app-about-us',
@@ -12,4 +13,7 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Input() clgStudentDts:student[]=[];
+
+  
 }

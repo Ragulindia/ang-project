@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { UserAuthGuard } from './user-auth.guard';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PageaNotFoundComponent } from './pagea-not-found/pagea-not-found.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path: 'about-us', component: AboutUsComponent
+  },
+  {
+    path: 'products', component: ProductsComponent
   },
   {
     path: "", redirectTo: 'home', pathMatch: 'full'

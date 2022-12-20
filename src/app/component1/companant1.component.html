@@ -22,7 +22,7 @@
 
     </div>
     <div class="resform">
-        <div *ngIf="RegisterPage == true">
+        <div *ngIf="RegisterPage">
             <form #registerForm="ngForm" (ngSubmit)="regi(registerForm)">
                 <h2>Sign up</h2>
 
@@ -79,7 +79,7 @@
         
         
 
-        <div *ngIf="LoginPage == true">
+        <div *ngIf="LoginPage">
 
             <h2>Log in</h2>
             <div id="user_name">

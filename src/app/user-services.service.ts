@@ -1,16 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { student } from './clg_details/student';
+import { student, usersdetails } from './clg_details/student';
+import { Products } from './clg_details/products';
 @Injectable({
   providedIn: 'root'
 })
 export class UserServicesService {
 
-  constructor(private http:HttpClient) { }
-  baseURL:string="https://gorest.co.in/public/v2/users";
+  constructor(private http: HttpClient) { }
+  baseURL: string = "https://gorest.co.in/public/v2/users";
+  credoURL: string = "https://credo-shoppingcartv5.herokuapp.com/listproducts";
 
-  public srvId:student[]=[
+  public srvId: student[] = [
     {
       stu_name: "Ragul",
       stu_rollNo: 101,
@@ -34,8 +36,13 @@ export class UserServicesService {
     }
   ]
 
-  
-  httpRequest():Observable<any>{
-    return this.http.get(this.baseURL);
+
+  httpRequest(): Observable<usersdetails> {
+    var val = this.http.get<usersdetails>(this.baseURL);
+    return val;
   }
+  getProductList(): Observable<Products> {
+    return this.http.get<Products>(this.credoURL);
+  }
+
 }

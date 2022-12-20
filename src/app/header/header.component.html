@@ -6,8 +6,9 @@
         <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
         <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
         <li><a routerLink="/login" routerLinkActive="active">Contact Us</a></li>
-
+        <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
     </ul>
    <a routerLink="/register"> <i class="fa-solid fa-user" id="user_icon"></i></a>
 </div>
+<app-about-us [clgStudentDts]="clgParent"></app-about-us>
 <router-outlet></router-outlet>

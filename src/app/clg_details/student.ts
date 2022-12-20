@@ -10,3 +10,10 @@ export interface Teacher{
     teacher_id:number,
     teacher_class:number
 }
+export interface usersdetails {
+    'id':number,
+    'name':string,
+    'email':string,
+    'gender':string,
+    'status':string
+}

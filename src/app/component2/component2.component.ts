@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Teacher } from '../clg_details/student';
-import{UserServicesService} from'../user-services.service'
+import { Teacher, usersdetails } from '../clg_details/student';
+import { UserServicesService } from '../user-services.service'
 @Component({
   selector: 'app-component2',
   templateUrl: './component2.component.html',
@@ -42,42 +42,85 @@ export class Component2Component implements OnInit {
       return 'yellow';
     }
   }
-//  getname(Name: string): string {
-//     if (Name == 'Ragul') {
-//       return 'red';
-//     }
-//     else if (Name == "Ragu") {
-//       return 'blue';
-//     }
-//     else {
-//       return 'yellow';
-//     }
-//   }
+  //  getname(Name: string): string {
+  //     if (Name == 'Ragul') {
+  //       return 'red';
+  //     }
+  //     else if (Name == "Ragu") {
+  //       return 'blue';
+  //     }
+  //     else {
+  //       return 'yellow';
+  //     }
+  //   }
 
   title: string = "This is the interpolation value from typescript";
   data_binding() {
     this.title = "The value changed by CLICK Event";
   }
-  getHttp(){
-    this.serStu.httpRequest().subscribe( res => console.log(res));
+  tableDtls:boolean = false;
+  userDetails:any;
+  getHttp() {
+    
+    this.serStu.httpRequest().subscribe((res) => {
+      console.log(res);
+      this.userDetails = res;
+      this.tableDtls = true;
+    })
+    
   }
-  Title:string="This value from the Property binding";
-  imageUrl="C:/Angular projects/Angularlogo.png";
-  imageUrl1="https://angular.io/assets/images/logos/angular/logo-nav@2x.png";
+  Title: string = "This value from the Property binding";
+  imageUrl = "C:/Angular projects/Angularlogo.png";
+  imageUrl1 = "https://angular.io/assets/images/logos/angular/logo-nav@2x.png";
 
-  ngif1:string="This Employee details  from typescript file";
-  ngif2:string="This Salary details  from typescript file";
+  ngif1: string = "This Employee details  from typescript file";
+  ngif2: string = "This Salary details  from typescript file";
 
-  EMPLOYEE:boolean=false;
-  SALARY:boolean=false;
-  empDet(){
-    this.EMPLOYEE=true;
-    this.SALARY=false;
+  EMPLOYEE: boolean = false;
+  SALARY: boolean = false;
+  empDet() {
+    this.EMPLOYEE = true;
+    this.SALARY = false;
   }
-  salDet(){
-    this.SALARY=true;
-    this.EMPLOYEE=false;
+  salDet() {
+    this.SALARY = true;
+    this.EMPLOYEE = false;
   }
-  friuts:string[]=["apple","bannana",'orange']
-  Today_date= new Date
+  friuts: string[] = ["apple", "bannana", 'orange']
+  Today_date = new Date;
+  // parent={
+  //   _id:11,
+  //   pdtCatId:'sports',
+  //   pdtName:'CricketBat',
+  //   pdtPrice:200,
+  //   pdtDesc:'Rose wood',
+  //   pdtImgPath:'asfgdgd'
+  // }
+  parent =" This value from Parent Component";
+
+  tableVal =[
+    {
+      stu_name: "Ragul",
+      stu_rollNo: 101,
+      stu_class: 12,
+      stu_section: "A",
+      stu_contact: 12345
+    },
+    {
+      stu_name: "Raj",
+      stu_rollNo: 102,
+      stu_class: 10,
+      stu_section: "B",
+      stu_contact: 12345
+    },
+    {
+      stu_name: "Ragu",
+      stu_rollNo: 101,
+      stu_class: 11,
+      stu_section: "C",
+      stu_contact: 12345
+    }
+  ]
+
+  
 }

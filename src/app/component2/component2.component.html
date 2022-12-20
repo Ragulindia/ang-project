@@ -33,6 +33,26 @@
 <div>
     <button (click)="getHttp()">Http request</button>
 </div>
+<div *ngIf="tableDtls">
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Gender</td>
+            <td>Status</td>
+        </tr>
+
+
+        <tr *ngFor="let u of userDetails">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.gender}}</td>
+            <td>{{u.status}}</td>
+        </tr>
+    </table>
+</div>
 <p [innerText]="Title"></p>
 
 <img [src]="imageUrl">
@@ -68,7 +88,7 @@
         {{student_details | json}}
     </p>
 </div>
-
+<app-products [products]="parent"></app-products>
 
 
 <router-outlet></router-outlet>
