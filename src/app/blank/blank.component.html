@@ -1,0 +1,29 @@
+<p>blank works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h2>hello</h2>
+        </div>
+        <div class="col-4">
+            <h3>everyone</h3>
+            <p>{{dataFun()}}</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <p>{{databind}} and {{'this value is in the HTML file'}}</p>
+</div>
+<div class="container">
+    <button class="btn btn-warning" type="button" (click)="addserver()">data binding</button>
+</div>
+<div class="container">
+    <button class="btn btn-primary" (click)="eventinterpolation()" [disabled]="!server">click_Fun</button>
+    <p>{{addval}}</p>
+</div>
+<div class="containar">
+    <label for="">Enter your name: </label>
+    <input type="text" name="userName" id="" class="" (input)="updateName($event)">
+    <input type="text" class="form-control" [(ngModel)]="event1">
+    <!-- <p>{{event1}</p> -->
+</div>
+<p>{{event1}}</p>

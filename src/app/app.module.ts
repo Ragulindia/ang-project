@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { UserServicesService } from './user-services.service';
 import {  HttpClientModule } from '@angular/common/http';
 import { PageaNotFoundComponent } from './pagea-not-found/pagea-not-found.component';
+import { BlankComponent } from './blank/blank.component';
 
 
 
@@ -29,6 +30,7 @@ import { PageaNotFoundComponent } from './pagea-not-found/pagea-not-found.compon
     ServicesComponent,
     LoginComponent,
     PageaNotFoundComponent,
+    BlankComponent,
   ],
   imports: [
     BrowserModule,

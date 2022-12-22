@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import{ student, Teacher} from '../clg_details/student'
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-about-us',
