@@ -27,3 +27,22 @@
     <!-- <p>{{event1}</p> -->
 </div>
 <p>{{event1}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <button class="btn btn-primary" (click)="showDetail = !showDetail">Show Details</button>
+        </div>
+        <div class="col-4">
+            <p *ngIf="showDetail">Details are show here</p>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-warning" (click)="onToggle()">Click</button>
+        </div>
+        <div class="col-1">
+            <p *ngFor="let log of log1" [ngStyle]="{backgroundColor:log >5 ? 'blue':'transprant'}" 
+                [ngClass]="{'texcolor' : log > 5}">
+                {{log}}</p>
+        </div>
+    </div>
+
+</div>

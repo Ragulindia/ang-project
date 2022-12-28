@@ -36,9 +36,14 @@ export class BlankComponent implements OnInit {
   }
   event1: string = "ragul";
   updateName(event: any) {
-// console.log(event);
+    // console.log(event);
 
     this.event1 = (<HTMLInputElement>event.target).value;
   }
- 
+  showDetail: boolean = false;
+  log1:any = [];
+  onToggle() {
+    this.showDetail = !this.showDetail;
+    this.log1.push(this.log1.length + 1)
+  }
 }
